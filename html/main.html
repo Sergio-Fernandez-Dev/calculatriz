@@ -5,22 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../scripts/script.js"></script>
+    <link rel="stylesheet" href="../styles/style.css">
     <title>Calculatriz</title>
 </head>
 <body>
-    <h1>Calculatriz</h1>
+    <h1>Calculadora</h1>
     <form id="form">
-        <input type="number" name="num1" id="num1" placeholder="Primer número">
-        <label for="sum">+</label>
-        <input type="radio" name="sum" id="sum">
-        <label for="rest">-</label>
-        <input type="radio" name="rest" id="rest">
-        <label for="multiply">*</label>
-        <input type="radio" name="multiply" id="multiply">
-        <label for="divide">/</label>
-        <input type="radio" name="divide" id="divide">
-        <input type="number" name="num2" placeholder="Segundo número">
-        <button>Calcular</button>
+        <input class="field" type="number" name="num1" id="num1" placeholder="Primer número">
+        <input class="field" type="number" name="num2" id="num2" placeholder="Segundo número">
+        <fieldset>
+            <div class="radio-group">
+                <input type="radio" name="operator" id="sum" value="sum">
+                <label for="sum">Sumar</label>
+            </div>
+            <div class="radio-group">
+                <input type="radio" name="operator" id="rest" value="rest">
+                <label for="rest">Restar</label>
+            </div>
+            <div class="radio-group">
+                <input type="radio" name="operator" id="multiply" value="multiply">
+                <label for="multiply">Multiplicar</label>
+            </div>
+            <div class="radio-group">
+                <input type="radio" name="operator" id="divide" value="divide">
+                <label for="divide">Dividir</label>
+            </div>
+        </fieldset>
+        <button type="button" id="button">Calcular</button>
+        <input class="field" name="result-box" id="result-box" placeholder="Resultado">
     </form>
 </body>
 </html>
